@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>在线机器人</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#max{
+				position: relative;
+				width: 904px;
+				height: 596px;
+				margin: 80px auto;
+				background: url(images/bj.png);
+				border: 1px solid #ddd;
+				border-radius: 4px;
+			}
+			#cont{
+				position: absolute;
+				left: 201px;
+				top: 100px;
+				width: 672px;
+				height: 366px;
+				padding: 0 14px;
+				overflow: auto;
+			}
+			
+			/*滚动条样式*/
+	        #cont::-webkit-scrollbar {/*滚动条整体样式*/
+	            width: 8px; /*高宽分别对应横竖滚动条的尺寸*/
+	            height: 4px;
+	        }
+	        #cont::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+	            border-radius: 5px;
+	            background: #ccc;
+	        }
+	        #cont::-webkit-scrollbar-track {/*滚动条里面轨道*/
+	       		border-radius: 5px;
+	            border-radius: 0;
+	            background: #fbfbfb;
+	        }
+			
+			#txt{
+				position: absolute;
+				left: 200px;
+				bottom: 38px;
+				width: 701px;
+				height: 52px;
+				font-size: 18px;
+				font-family: "微软雅黑";
+				resize: none;
+				border: none;
+				outline: none;
+			}
+			#btn{
+				position: absolute;
+				left: 827px;
+				top: 558px;
+				width: 64px;
+				height: 26px;
+				border: 0;
+				border-radius: 2px;
+				background: url(images/btn.png);
+			}
+			p{
+				/*height: 48px;*/
+				overflow: hidden;
+				margin: 12px 0;
+			}
+			p>span{
+				display: inline-block;
+				/*height: 48px;*/
+				line-height: 48px;
+				padding: 0 16px;
+				font-size: 18px;
+				border-radius: 12px;
+			}
+			.myChat>img,.myChat>span{
+				float: right;
+			}
+			.myChat>span{
+				color: #fff;
+				background: #2783f5;
+			}
+			.herChat>img,.herChat>span{
+				float: left;
+			}
+			.herChat>span{
+				background: #eee;
+				max-width: 75%;
+    			white-space: normal;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="max">
+			<div id="cont">
+				<p class="myChat">
+					<img src="images/me.png"/>
+					<span class="myTxt">啦啦啦~</span>
+				</p>
+				<p class="herChat">
+					<img src="images/her.png"/>
+					<span class="herTxt">你好哇,小主人。我是你的专属机器人"只属于你"。</span>
+				</p>
+			</div>
+			<textarea id="txt"></textarea>
+			<button id="btn"></button>
+		</div>
+	</body>
+</html>
+<script type="text/javascript" charset="UTF-8">
+//接口路径 ： 
+//"http://www.tuling123.com/openapi/api?key=2465e182e4154777a3a02da0ccaa6c88&userid=1&info="+txt.value
+//说明      userid可以任意给个数值       key不能更改       info为用户输入的内容
+	// cloneNode(true)
+	function $(id) {
+		return document.getElementById(id);
+	}
+	$("btn").onclick = function() {
+		var info = $("txt").value;
+		//创建我的聊天
+		var mychat = $("cont").children[0].cloneNode(true);
+		$("cont").appendChild(mychat);
+		mychat.children[1].innerHTML = info;
+		mychat.scrollIntoView();
+		
+		//创建机器人的聊天
+		var ajax;
+		if (window.XMLHttpRequest){
+			ajax = new XMLHttpRequest();
+		}else {
+			ajax = new ActiveXObject("mirosoft.XMLHTTP");
+		}
+		var url = "http://www.tuling123.com/openapi/api?key=2465e182e4154777a3a02da0ccaa6c88&userid=1&info="+info;
+		ajax.open("GET",url);
+		ajax.send();
+		ajax.onreadystatechange = function(){
+			if( ajax.readyState == 4 && ajax.status == 200) {
+				//console.log(typeof ajax.responseText);
+				var json = JSON.parse( ajax.responseText );
+				//创建机器人的聊天
+				var herchat = $("cont").children[1].cloneNode(true);
+				$("cont").appendChild(herchat);
+				herchat.children[1].innerHTML = json.text;
+				herchat.scrollIntoView();
+			}
+		}
+		$("txt").value = "";
+	}
+</script>

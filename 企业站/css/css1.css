@@ -1,0 +1,111 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0;padding:0;}
+body{font-family:"微软雅黑"}
+a{text-decoration:none;}
+img{border:none;}
+/*头部样式*/
+.head1{width:962px;height:100px;margin:0 auto;}
+.logo{width:281px;height:33px;float:left;margin-top:33.5px;font-size:0px;}
+.search{width:225px;height:26px;background:#f1f1f1;float:right;border:1px solid #e5e5e5;margin-top:37px;}
+.txt{
+	width:202px;height:26px;border:none;background:none;outline:none;float:left;text-indent:14px;line-height:26px;color:#888;
+	}
+.dianji{
+	width:23px;height:26px;float:left;border:none;background:url(../images/img2.jpg) left center no-repeat;outline:none;
+	}
+/*导航样式*/
+.nav ul{width:962px;list-style:none;margin:0 auto;}
+.nav{height:58px;background:url(../images/img3.jpg);}
+.nav li{
+	width:119px;height:58px;float:left;text-align:center;line-height:58px;border-right:1px solid #494949;
+	}
+.nav a{color:#fff;}
+.nav .xian{border:none;
+	}
+/*导播图*/
+.tu{height:465px; background:red;}
+.tu img{width:100%;height:100%; vertical-align:middle;}
+/*news*/
+.news{width:962px;height:240px;margin:0 auto;}
+	.box1{width:479px;height:100%;background:#ffffff;float:left;}
+		.news-bt{
+	width:100%;height:41px;padding-top:35px;font-size:18px;font-weight:normal;color:#3e454f;}
+		
+		.box1 li{font-size:12px;line-height:24px;list-style:none;height:24px;background:url(../images/img13.jpg) no-repeat left center;padding-left:14px;}/**我不懂为什么要加height，不加就会产生重叠（删掉height运行看出来）**/
+		.box1 a{color:#545454;float:left;
+			width:290px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;
+		}
+		.box1 span{color:#bebebe;float:right;padding-right:28px;}
+	.box2{width:240px;height:100%;background:#f1f1f1;float:left;}
+		.box2 .news-bt{padding-left:20px;}
+		.box2 p{color:#565656;font-size:12px;padding:0 24px;}
+		.box2 .gongsi{font-size:14px;padding:11px 24px 12px;}
+		.box2 .jieshao{color:#9d9d9d;line-height:24px;padding-top:21px;}
+	.box3{width:207px;height:100%;background:#fff url(../images/img4.png) no-repeat right bottom;float:left;border-left:1px solid #fff;padding-left:35px;}
+		.box3 .news-bt{padding-left:35px;}
+		.box3 p{color:#767676;font-size:14px;line-height:24px;}
+	    .box3 img{padding-top:22px;}
+/*project*/		
+.project{width:962px;height:280px;margin:0 auto;}
+.project .shichang{
+	height:35px;
+	padding-top:30px;
+	}
+.project dl{width:210px; margin-right:20px; float:left;}
+.project dt{width:210px;margin-bottom:12px;}
+.project dd{font-size:12px;width:210px;color:#c1c1c1;}
+.project .box{margin-right:0;}
+/*产品中心*/
+.linkbox{
+	height:250px;background:#e5e5e5;
+	}
+	.links{width:962px;height:250px;margin:0 auto;}
+	.links>div{float:left;}
+	.linkleft{width:452px;height:100%;}
+	.linkbt{
+			font-size:16px;height:26px;padding:31px 0 0 12px;font-weight:normal;border-bottom:1px solid #c1c1c1;margin-bottom:14px;
+			}
+		.links li{list-style:none;padding-left:14px;background:url(../images/img12.jpg) no-repeat left center;padding-left:14px;}
+		.links a{
+			line-height:24px;font-size:12px;color:#777777;
+			}
+		.list ul{float:left;}
+		.list1{width:152px;margin-left:5px;}
+		.list2{width:192px;}
+		.center{width:152px;height:250px;margin:0 50px;}
+		.right{width:258px;height:250px;}
+/*last*/
+.last{width:962px;height:82px;margin:0 auto;}
+.last div{float:left;}
+.last ul{width:300px;height:58px;list-style:none;padding-top:24px;}
+.last li{font-size:12px;line-height:12px;float:left;border-right:1px solid #7d7d7d;text-align:center;padding-left:7px;padding-right:7px;color:#878787;}
+.last .qu{border-right:0;}
+.last .wang{margin-left:0;}
+.COPY{font-size:12px;magging-left:126px;marggin:0 auto;margin-top:24px;color:#878787;}
+
+.last .fen{float:right;margin-top:24px;font-size:12px;color:#878787;}
+.fen a{target:_blank;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

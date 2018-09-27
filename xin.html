@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{margin:0; padding:0;}
+			div{width:450px; height:450px;position:fixed; top:0; right:0; bottom:0; left:0; margin:auto; display: flex; flex-wrap: wrap;justify-content: center; border:1px solid #ccc;}
+			div{animation: myxin 1s ease-in-out infinite;}
+			p:nth-child(1),p:nth-child(2){width:199px;height: 215px;background: red;}
+			p:nth-child(3){width:173px; height:173px; background: red; transform: rotate(45deg); position: absolute;top:150px; border-radius: 0 0 35% 0;}
+			p:nth-child(1){border-radius:50% 0 0 50%; transform: rotate(45deg);}
+			p:nth-child(2){border-radius:0 50% 50% 0;transform: rotate(-45deg);}
+			
+			@keyframes myxin{
+				0%{transform:scale(0.96)}
+				25%{transform: scale(0.98);}
+				50%{transform: scale(1);}
+				75%{transform: scale(1.02);}
+				100%{transform: scale(1.1);}
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<div>
+			<p></p>
+			<p></p>
+			<p></p>
+		</div>
+	</body>
+</html>

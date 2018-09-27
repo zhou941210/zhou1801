@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body{background: #000;}
+			*{margin: 0; padding: 0;}
+			li{list-style:none;}
+			html{height:100%;}
+			body{height:100%; display:flex; justify-content:space-around; align-items:center;}
+			.box{width:200px; height:200px; background: #e7e7e7; border-radius: 8px; box-shadow:0 10px 0 0 #fff inset,-10px 0 0 0 #d7d7d7 inset,0 -10px 0 0 #b4b4b4 inset,10px 0 0 0 #D7D7D7 inset; box-sizing: border-box;  padding:10px;}
+			.box li{
+				width:48px; height:48px; background: #333; border-radius:48px; box-shadow:0 3px 0 0 #090909 inset,0 -3px 0 0 #555 inset;
+				}
+			.box:nth-child(1){justify-content:center; align-items:center;}
+			.box:nth-child(2) ul{display:flex; height:100%;justify-content:space-between;}
+			.box:nth-child(2) li:nth-child(2){align-self:flex-end;}
+			.box:nth-child(3) ul{height:100%; display:flex; justify-content:space-between;}
+			.box:nth-child(3) li:nth-child(2){align-self:center;}
+			.box:nth-child(3) li:nth-child(3){align-self:flex-end;}
+			.box:nth-child(4) ul{display:flex; height:50%; justify-content:space-between;}
+			.box:nth-child(4) ul:nth-child(2) li{align-self:flex-end;}
+			/**.box:nth-child(5) ul{display:flex; flex-direction:column; justify-content:space-between;}**/
+			.box:nth-child(5){display:flex; justify-content:space-between;}
+			.box:nth-child(5) ul:nth-child(1),.box:nth-child(5) ul:nth-child(3){display:flex; flex-direction:column; justify-content:space-between; height:100%;}
+			.box:nth-child(5) ul:nth-child(2){display:flex; align-self:center;}
+			.box:nth-child(6){display:flex; justify-content:space-between;}
+			.box:nth-child(6) ul:nth-child(1),.box:nth-child(6) ul:nth-child(2),.box:nth-child(6) ul:nth-child(3){display:flex; flex-direction:column; justify-content:space-between;}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<ul>
+				<li></li>
+			</ul>
+		</div>
+		<div class="box">
+			<ul>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<div class="box">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<div class="box">
+			<ul>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<div class="box">
+			<ul>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul>
+				<li></li>
+			</ul>
+			<ul>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<div class="box">
+			<ul>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</body>
+</html>

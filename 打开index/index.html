@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<label>
+			qq号:
+			<input type="text" id="txt"/>
+		</label>
+		<button id="bt">验证号码</button>
+		
+		<script type="text/javascript">
+			var txt = document.getElementById("txt");
+			var bt = document.getElementById("bt");
+			function xin(){
+						window.open("xin.html")
+					}
+			bt.onclick = function() {
+				if(txt.value.length == 0) {
+					alert("不能输入为空");
+					txt.value="";
+				}
+				else if(txt.value[0] == 0){
+					alert("第一个数字不能为0");
+					txt.value="";
+				}
+				else if(isNaN(txt.value)) {
+					alert("输入的必须是数字");
+					txt.value="";
+				}else if(txt.value.length<5 || txt.value.length>10){
+					alert("输入的数字必须在5个以上、10个以下");
+					txt.value="";
+				}else if(txt.value.indexOf(".") != -1){
+					alert("不能是小数");
+					txt.value="";
+				}else {
+					alert("即将跳转到我的心？是否确定")
+					xin();
+				}
+			}
+		</script>
+	</body>
+</html>

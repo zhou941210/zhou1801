@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			body,h1,h2,h3,h4,h5,h6,p,hr,ul,ol,dl,dd,input,textarea,option,th,td,fieldset,legend{margin:0; padding:0;}
+			li{list-style:none;}
+			html,body{width:100%; height:100%; background: #000;}
+			.wrap{width:239px; height:260px; position: fixed; left:0; top:0; right: 0; bottom:0; margin:auto; background: #000; transform-style:preserve-3d; overflow: hidden;}
+			.wrap>p{font-size:20px; text-align: center; font-family: "方正舒体";color:#fff;position: relative; animation: myzi 2s linear infinite alternate;}
+			@keyframes myzi{
+				from{transform: translateX(-300px);}
+				to{transform: translateX(300px);}
+			}
+			
+			
+			
+			.dabox{width:220px; height:190px; animation: mymove 0.2s linear infinite;}
+			@keyframes mymove{
+				from{transform: translateY(0);}
+				to{transform: translateY(5px);}
+			}
+			
+			.header p:nth-child(1){width:100px; height:90px; background: #fff; border-radius: 30% 0 0 0; transform: rotateZ(20deg) translateX(50px);}
+			.header p:nth-child(2){width:100px; height:100px; background: #fff; border-radius:50%; transform: translate(75px,-80px);}
+			
+			.header p:nth-child(3){width:50px; height:80px; background: #fff; border-radius:0 90% 120% 0; transform: rotateZ(-15deg) translate(190px,-139px);}
+			
+			
+			.h1{width: 165px; height:120px; background: #fff; border-radius:120% 120% 100% 100% ; transform:translate(40px,-253px); border-color:#fff;}
+			.h1 p{border: 1px solid #ff6b84;}
+			.h1 p:nth-child(2){width:39px; height:30px; background: pink; border-radius: 30% 70% 70% 30%; transform: rotateZ(150deg) translate(-40px,15px);}
+			.h1 p:nth-child(3){width:39px; height:30px; background: pink; border-radius: 30% 70% 70% 30%; transform: rotateZ(-30deg) translate(6px,-39px);}
+			.h1 p:nth-child(5){width:20px; height:20px; border-radius: 50%; background: pink; transform: translate(16px,-85px);}
+			.h1 p:nth-child(4){width:60px; height:0; border:3px solid #ff6b84; transform: rotateZ(-30deg) translate(32px,-64px);}
+			
+			.h1 .yan1,.h1 .yan2{width:12px; height: 10px; border:none; border-radius: 50%; background: repeating-radial-gradient(#000,#6f6f6f);}
+			.h1 .yan1{
+				transform: translate(50px,-65px);}
+				.yan1>span{
+					display: block; width:5px; height:2px; background: #000; transform: rotate(45deg); border-radius: 50%;
+				}
+				.yan2>span{
+					display: block; width:5px; height:2px; background: #000; transform: translateX(8px) rotate(-45deg) ; border-radius: 50%;
+				}
+			.h1 .yan2{
+				transform: translate(100px,-75px);}
+			.h1 .fen1,.h1 .fen2{width:18px; height: 15px; background: repeating-radial-gradient(#ffb5c9,#f5d1d3); border:none;border-radius: 50%;}
+			.h1 .fen1{
+				transform: translate(116px,-70px);}
+			.h1 .fen2{
+				transform: translate(30px,-85px);}
+			.h1 .bizi{
+				width:30px; height:22px; border:1px solid #2f2627; border-radius: 50%; background: #ffbac5; transform: translate(65px,-116px);
+			}
+			.bizi .kong1,.bizi .kong2{
+				display: block; width:9px; height:9px; background: #303730; border-radius: 50%;
+			}
+			.bizi .kong1{
+				transform: translate(4px,7px);}
+				.bizi .kong2{
+				transform: translate(16px,-2px);}
+				.h1 .zui{
+					width:17px; height:9px; box-sizing: border-box; border:2px solid #272727; background: #fff; border-radius: 40% 40% 50% 50%; transform-style:preserve-3d;animation: myzui 0.3s linear infinite;
+				}
+				@keyframes myzui{
+					from{transform:translate(73px,-115px) scale(1);}
+					to{transform:translate(73px,-115px) scale(0.7);}
+				}
+				
+				
+				.h1 .ertou{
+				width:50px; height:39px; border-radius:50%; border:0; background: repeating-radial-gradient(#ffbec6,#fff); transform: translate(58px,-7px);
+				}
+			.shen{
+				width:90px; height:30px; background: #fff; transform: translate(77px,-258px);
+				}
+			.left,.right{width:60px; height:18px; background: #fff; border-radius:39%;}
+			.left{animation: myleft 0.15s linear infinite;
+			}
+			@keyframes myleft{
+				from{transform: translate(52px,-295px) rotate(160deg);}
+				to{transform: translate(52px,-295px) rotate(150deg);}
+			}
+			
+			
+			.right{
+				animation: myright 0.15s linear infinite;
+				}
+				@keyframes myright{
+					from{transform: translate(133px,-313px) rotate(20deg); }
+					to{transform: translate(133px,-313px) rotate(30deg); }
+				}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<p>哈 哈 哈</p>
+			
+		<div class="dabox">
+			<div class="header">
+				<p></p>
+				<p>
+					<span></span>
+				</p>
+				<p></p>
+			</div>
+			
+			<div class="h1">
+				<p class="ertou"></p>
+				<p></p>
+				<p></p>
+				<p></p>
+				<p></p>
+				
+				<p class="yan1">
+					<span></span>
+				</p>
+				<p class="yan2">
+					<span></span>
+				</p>
+				<p class="fen1"></p>
+				<p class="fen2"></p>
+				<p class="bizi">
+					<span class="kong1"></span>
+					<span class="kong2"></span>
+				</p>
+				<p class="zui"></p>
+			</div>
+			<div class="shen"></div>
+			<div class="left"></div>
+			<div class="right"></div>
+		</div>
+		</div>
+	</body>
+</html>
